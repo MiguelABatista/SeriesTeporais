@@ -1,0 +1,26 @@
+<dicionario>
+    <item chave="DATA (YYYY-MM-DD)">Data</item>
+    <item chave="HORA (UTC)">Hora</item>
+    <item chave="Hora UTC">Hora</item>
+    <item chave="PRECIPITAÇÃO TOTAL, HORÁRIO (mm)">Precipitacao</item>
+    <item chave="PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)">Pressao_atmosferica</item>
+    <item chave="PRESSÃO ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB)">Pressao_atmosferica_max</item>
+    <item chave="PRESSÃO ATMOSFERICA MIN. NA HORA ANT. (AUT) (mB)">Pressao_atmosferica_min</item>
+    <item chave="RADIACAO GLOBAL (KJ/m²)">Radiacao</item>
+    <item chave="RADIACAO GLOBAL (Kj/m²)">Radiacao</item>
+    <item chave="RADIACAO GLOBAL (Kj/mÂ²)\n">Radiacao</item>
+    <item chave="RADIACAO GLOBAL (Kj/mÂ²)">Radiacao</item>
+    <item chave="RADIACAO GLOBAL (Kj/mÂ²)">Radiacao</item>
+    <item chave="TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)">Temperatura_do_ar</item>
+    <item chave="TEMPERATURA DO PONTO DE ORVALHO (°C)">Temperatura_de_orvalho</item>
+    <item chave="TEMPERATURA MÁXIMA NA HORA ANT. (AUT) (°C)">Temperatura_max</item>
+    <item chave="TEMPERATURA MÍNIMA NA HORA ANT. (AUT) (°C)">Temperatura_min</item>
+    <item chave="TEMPERATURA ORVALHO MAX. NA HORA ANT. (AUT) (°C)">Temperatura_de_orvalho_max</item>
+    <item chave="TEMPERATURA ORVALHO MIN. NA HORA ANT. (AUT) (°C)">Temperatura_de_orvalho_min</item>
+    <item chave="UMIDADE REL. MAX. NA HORA ANT. (AUT) (%)">Umidade_rel_max</item>
+    <item chave="UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)">Umidade_rel_min</item>
+    <item chave="UMIDADE RELATIVA DO AR, HORARIA (%)">Umidade_rel</item>
+    <item chave="VENTO, DIREÇÃO HORARIA (gr) (° (gr))">Vento_direcao</item>
+    <item chave="VENTO, RAJADA MAXIMA (m/s)">Vento_rajada_max</item>
+    <item chave="VENTO, VELOCIDADE HORARIA (m/s)">Vento_velocidade</item>
+</dicionario>
