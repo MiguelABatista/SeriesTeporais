@@ -55,10 +55,11 @@ counter = 0
 for neurons_list in neurons_big_list:
     counter += 1
     model = define_model(X_train, neurons_list)
-    model.fit(X_train, y_train, epochs = 300, batch_size = 16)
+    model.fit(X_train, y_train, epochs = 100, batch_size = 16)
     predictions = model_forecast(model, training_set_scaled, test_set_scaled, scaler, windows_size)
     rmse_test = np.sqrt(mean_squared_error(imputed_test, predictions))
-
+    
+    plt.figure() 
     plt.plot(imputed_test.index, imputed_test, color = 'red', label = 'series')
     plt.plot(imputed_test.index, predictions, color = 'blue', label = 'predicted values')
     plt.title('LSTM - forecast')
