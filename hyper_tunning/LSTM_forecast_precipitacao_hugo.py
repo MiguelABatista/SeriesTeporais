@@ -112,7 +112,7 @@ plt.plot(range(len(Model_p.history.history['loss'])),Model_p.history.history['lo
 plt.xlabel('epochs')
 plt.ylabel('loss')
 plt.show()
-exit()
+
 # Forecast do modelo
 
 

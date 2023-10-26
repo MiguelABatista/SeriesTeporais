@@ -1,1 +1,0 @@
-base_df = pd.DataFrame()
