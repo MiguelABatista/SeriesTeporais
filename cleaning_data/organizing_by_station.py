@@ -1,7 +1,6 @@
 import os
 import shutil
 
-
 def main(just_rio_path, organized_by_station_path):
     '''
     This function organizes that are organized by year and puts them in a folder organized by station
