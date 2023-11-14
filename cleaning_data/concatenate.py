@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import datetime
 import xml.etree.ElementTree as ET
+import config
 
 def read_xlm(xlm_path):
     '''
@@ -108,7 +109,7 @@ def from_hourly_to_daily(df):
     daily_df = df.resample('D').mean()
     return daily_df
 
-def main(xlm_dict_path,organized_by_station_path,daily_data_path):
+def main():
     '''
     This function concatenates all CSV files from all stations into a single CSV file
     And this CSV file contains the daily data
@@ -119,20 +120,16 @@ def main(xlm_dict_path,organized_by_station_path,daily_data_path):
     No output parameters
     '''
 
-    if not os.path.exists(daily_data_path):
-        os.makedirs(daily_data_path)
+    if not os.path.exists(config.daily_data_path):
+        os.makedirs(config.daily_data_path)
 
-    corrector = read_xlm(xlm_dict_path)
+    corrector = read_xlm(config.xlm_dict_path)
     #I wasnt able to read the columns with the special characters, so I had to do this
     corrector["\"UMIDADE RELATIVA DO AR HORARIA (%)\""] = 'Umidade_rel'
 
-    for estacao_path in os.listdir(organized_by_station_path):
+    for estacao_path in os.listdir(config.organized_by_station_path):
         if estacao_path[0] == 'A':  
-            concatenate_csv(estacao_path, organized_by_station_path, daily_data_path, corrector)
+            concatenate_csv(estacao_path, config.organized_by_station_path, config.daily_data_path, corrector)
 
 if __name__ == '__main__':
-    organized_by_station_path = r'C:\Users\miguel.batista_bigda\Documents\GitHub\SeriesTeporais\files\organized_by_station'
-    xlm_dict_path = r'C:\Users\miguel.batista_bigda\Documents\GitHub\SeriesTeporais\cleaning_data\column_dict.xml'
-    daily_data_path = r'C:\Users\miguel.batista_bigda\Documents\GitHub\SeriesTeporais\files\daily_data'
-    main(xlm_dict_path, organized_by_station_path, daily_data_path)
-    print('Done!')
+    main()

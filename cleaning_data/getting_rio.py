@@ -1,6 +1,7 @@
 import os
 import zipfile
 import shutil
+import config
 
 def merge_folders(root_dir):
     '''
@@ -26,7 +27,7 @@ def merge_folders(root_dir):
                         shutil.move(item_path, destination_folder)
                 os.rmdir(source_folder)
 
-def main(raw_file_path,just_rio_path):
+def main():
     '''
     This function extracts all files from the zip files that are in the folder "raw_files"
     And get just the stations that are in rio de janeiro
@@ -36,10 +37,10 @@ def main(raw_file_path,just_rio_path):
     '''
 
     for year in range(2000, 2023):
-        zip_file_path = os.path.join(raw_file_path, f"{year}.zip")
+        zip_file_path = os.path.join(config.raw_file_path, f"{year}.zip")
         
         #Create the folder (if it doesn't exist)
-        year_output_dir = os.path.join(just_rio_path, str(year))
+        year_output_dir = os.path.join(config.just_rio_path, str(year))
         os.makedirs(year_output_dir, exist_ok=True)
         
         # Loops over all zip files
@@ -49,10 +50,7 @@ def main(raw_file_path,just_rio_path):
                 if '_RJ_' in file_name:
                     zip_ref.extract(file_name, year_output_dir)
 
-    merge_folders(just_rio_path)
+    merge_folders(config.just_rio_path)
 
 if __name__ == "__main__":
-    raw_file_path = r"files\raw_files"
-    just_rio_path = r"files\just_rio"
-    main(raw_file_path, just_rio_path)        
-    print("Done!")
+    main()        
