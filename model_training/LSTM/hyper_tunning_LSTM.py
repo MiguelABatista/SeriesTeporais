@@ -1,4 +1,4 @@
-from LSTM_forecast_precipitacao import *
+from model_training.LSTM.LSTM_forecast_precipitation import *
 import os
 
 def write_results_to_file(path, neurons_list, rmse_test, predictions):

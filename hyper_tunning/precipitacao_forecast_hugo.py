@@ -17,7 +17,7 @@ import xgboost as xgb
 
 
 df = pd.read_csv('A601.csv', index_col = 'Data')
-df.index = pd.to_datetime(df.index)
+df.index = pd.to_datetime(df.indexpytho)
 
 # Passando para dados mensais
 df1 = df.resample('M').mean()
